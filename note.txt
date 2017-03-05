@@ -1,0 +1,25 @@
+Mar4
+----------------------------------
+1. Main- LinearLayout
+    4 TextView:
+    numbers/ colors/  family/ phrases
+
+2. app/source/main/restdirectory: There files control how the app appears on different devices.
+
+   Resources can include xml files, images, and other madia files.
+
+   res/ values
+
+    colors.xml
+        This defines the colors of our app, the app theme colors and the color associated with each category of the words.
+    dimensions.xml
+        file which contains dimensions such as the width and height values for our app. It also contains the list item height which we've here set to be 88 dp.
+
+        <!-- Height of each list item -->
+        <dimen name="list_item_height">88dp</dimen>
+
+    strings.xml
+        These are all the text strings that will appear to the user in the app and we put them in a single file so that we can easily translate the app into other languages.
+
+    styles.xml
+        Here we define the theme of the app and specify the theme colors. We also have the style for how a category should look and thats's why each category on the main screen of the app looks similar in terms of height, pedding, front size and more.
