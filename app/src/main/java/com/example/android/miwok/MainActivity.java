@@ -34,18 +34,18 @@ public class MainActivity extends AppCompatActivity {
         // Find the View that shows the numbers category
         TextView numbers = (TextView) findViewById(R.id.numbers);
 
-        // Set a click listener on that View
-        numbers.setOnClickListener(new OnClickListener() {
-            // The code in this method will be executed when the numbers category is clicked on.
-            @Override
-            public void onClick(View view) {
-                // Create a new intent to open the {@link NumbersActivity}
-                Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
-
-                // Start the new activity
-                startActivity(numbersIntent);
-            }
-        });
+//        // Set a click listener on that View
+//        numbers.setOnClickListener(new OnClickListener() {
+//            // The code in this method will be executed when the numbers category is clicked on.
+//            @Override
+//            public void onClick(View view) {
+//                // Create a new intent to open the {@link NumbersActivity}
+//                Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
+//
+//                // Start the new activity
+//                startActivity(numbersIntent);
+//            }
+//        });
 
         // Find the View that shows the family category
         TextView family = (TextView) findViewById(R.id.family);
@@ -84,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Set a click listener on that View
         phrases.setOnClickListener(new OnClickListener() {
+
             // The code in this method will be executed when the phrases category is clicked on.
             @Override
             public void onClick(View view) {
@@ -94,5 +95,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(phrasesIntent);
             }
         });
+    }
+
+    public void openNumbersList(View view){
+        Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
+
+        // Start the new activity
+        startActivity(numbersIntent);
+
     }
 }
