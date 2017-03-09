@@ -67,3 +67,40 @@ Mar06
     downloadIntent.setData(Uri.parse(fileUrl));
     startService(downloadIntent);
 
+
+Mar08
+--------------------------------------------------------------------------------------
+
+Event Listeners in Android:  https://developer.android.com/guide/topics/ui/ui-events.html
+
+Input Events-
+    On Android, there's more than one way to intercept the events from a user's interaction with your application. When considering events within your user interface, the approach is to capture the events from the specific View object that the user interacts with. The View class provides the means to do so.
+
+    Within the various View classes that you'll use to compose your layout, you may notice several public callback methods that look useful for UI events. These methods are called by the Android framework when the respective action occurs on that object. For instance, when a View (such as a Button) is touched, the onTouchEvent() method is called on that object. However, in order to intercept this, you must extend the class and override the method. However, extending every View object in order to handle such an event would not be practical. This is why the View class also contains a collection of nested interfaces with callbacks that you can much more easily define. These interfaces, called event listeners, are your ticket to capturing the user interaction with your UI.
+
+Event Listeners
+    An event listener is an interface in the View class that contains a single callback method. These methods will be called by the Android framework when the View to which the listener has been registered is triggered by user interaction with the item in the UI.
+
+    Included in the event listener interfaces are the following callback methods:
+
+    onClick()
+    From View.OnClickListener. This is called when the user either touches the item (when in touch mode), or focuses upon the item with the navigation-keys or trackball and presses the suitable "enter" key or presses down on the trackball.
+
+Concrete Class  vs Interface vs Abstract Class
+- Concrete Class
+    contains states and methods that FULLY IMPLEMENTED.
+- Abstract Class
+    contains states
+    some methods are fully implemented
+    some methods are abstract, not implemented
+- Interface
+    NOT IMPLEMENTED AT ALL
+    No states
+    All methods are abstract, not implemented
+
+
+How to setup an EVENT LISTENER?
+    1. Define the event listener (and the custom behavior for when the event happens)
+    2. Create a new object instance of the event listener (using the contructor)
+    3. Attach the listener to the view
+
