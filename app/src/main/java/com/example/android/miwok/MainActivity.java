@@ -22,7 +22,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
-import static com.example.android.miwok.R.id.family;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,21 +35,23 @@ public class MainActivity extends AppCompatActivity {
 
         // Find the View that shows the numbers category
         TextView numbers = (TextView) findViewById(R.id.numbers);
-        NumbersClickListener clickListener = new NumbersClickListener();
+
+        //Example for showing a toast message by clicking Numbers textView
+//       NumbersClickListener clickListener = new NumbersClickListener();
+//        numbers.setOnClickListener(clickListener);
 
         // Set a click listener on that View
-        numbers.setOnClickListener(clickListener);
-//        {
-            // The code in this method will be executed when the numbers category is clicked on.
-//            @Override
-//            public void onClick(View view) {
-//                // Create a new intent to open the {@link NumbersActivity}
-//                Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
-//
-//                // Start the new activity
-//                startActivity(numbersIntent);
-//            }
-//        });
+        numbers.setOnClickListener(new OnClickListener() {
+                                        // The code in this method will be executed when the numbers category is clicked on.
+                                         @Override
+                                         public void onClick(View view) {
+                                             //create a new intent to open the {@link NumbersActivity.class}
+                                             Intent numbersClick = new Intent(MainActivity.this, NumbersActivity.class);
+                                             //Start the new activity
+                                             startActivity(numbersClick);
+                                         }
+                                     });
+
 
         // Find the View that shows the family category
         TextView family = (TextView) findViewById(R.id.family);
