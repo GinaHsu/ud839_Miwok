@@ -136,4 +136,14 @@ OnClickListener vs onClick
     ) on Stack Overflow.
 
 
+Mar09
+---------------------------------------------------------------------------------------------------------
+Lesson 2:
+    - Array vs ArrayList
+    - Display a list of English / Miuok words pairs
+    - Add the words from all the remaining categories
+
+JAVA Data Tyoe by Google Developers: https://drive.google.com/open?id=0B4rs4Apvce51WjZLZjAxSU44Vms
+
+Logging from code: https://github.com/udacity/ud839_Miwok/commit/b09aa1f9e991a4d2d236aa5728a3e7b5c4ae465d
 
