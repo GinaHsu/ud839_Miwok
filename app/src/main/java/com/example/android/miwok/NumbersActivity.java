@@ -17,6 +17,11 @@ package com.example.android.miwok;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class NumbersActivity extends AppCompatActivity {
 
@@ -26,11 +31,42 @@ public class NumbersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_numbers);
 
         // Create an array of English words
-        String[] numberEnglish = {"One", "Two","Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"};
+        //String[] numberEnglish = {"One", "Two","Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"};
 
-        for(int i=0; i<10 ; i++){
-            System.out.println(numberEnglish[i]);
+        // Create an arrayList to store the all English words
+        ArrayList<String> numberEnglish = new ArrayList<String>();
+        numberEnglish.add("One");
+        numberEnglish.add("Two");
+        numberEnglish.add("Three");
+        numberEnglish.add("Four");
+        numberEnglish.add("Five");
+        numberEnglish.add("Six");
+        numberEnglish.add("Seven");
+        numberEnglish.add("Eight");
+        numberEnglish.add("Nine");
+        numberEnglish.add("Ten");
+
+
+        //Find the root view so we can add child view to it
+        LinearLayout rootView = (LinearLayout) findViewById(R.id.rootView);
+
+        // a for loop to display the all elements in the numberEnglish arrayList
+        for(int i = 0; i< numberEnglish.size() ; i++){
+
+            //Create a TextView to display the English word
+            TextView EnWordView = new TextView(this);
+            //set the text to be numberEnglish at the current indext
+            EnWordView.setText(numberEnglish.get(i));
+
+            //add the TextView as another child in the root view of the layout
+            rootView.addView(EnWordView);
+
+            //Log.v("NunmbersActivity" , "My numbersEnglish"+ "["+ i +"] : " + numberEnglish.get(i));
         }
+
+
+
+
 
 
     }
